@@ -1,3 +1,15 @@
+/*=============== Email ===============*/
+function SendMail() {
+	var params = {
+		from_name : document.getElementById("fullName").value,
+		email_id : document.getElementById("email_id").value,
+		message : document.getElementById("message").value
+	}
+	emailjs.send("service_mzjc822", "template_8b38uwh", params) 		
+		swal("Спасибо!", "Ваше сообщение отправлено.", "success");
+	}
+
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
 	const header = document.getElementById('header')

@@ -17,6 +17,13 @@
 	<!--=============== CSS ===============-->
 	<link rel="stylesheet" href="assets/css/styles.css">
 
+	<!--=============== EmailJs ===============-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+	<script type="text/javascript">
+		emailjs.init('uR31Z4KSLSBiX3-uN')
+	</script>
+
 	<title>Персональный сайт Егора Кирейкова</title>
 </head>
 
@@ -43,6 +50,12 @@
 					<li class="nav__item">
 						<a href="#skills" class="nav__link">
 							<i class='bx bx-book'></i>
+						</a>
+					</li>
+
+					<li class="nav__item">
+						<a href="#services" class="nav__link">
+							<i class='bx bxs-bank'></i>
 						</a>
 					</li>
 
@@ -260,7 +273,7 @@
 		</section>
 
 		<!--=============== SERVICES ===============-->
-		<section class="services section">
+		<section class="services section" id="services">
 			<span class="section__subtitle">Мои услуги</span>
 			<h2 class="section__title">Что я предлагаю</h2>
 
@@ -599,30 +612,26 @@
 					</div>
 				</div>
 
-
 				<div class="contact__content">
 					<h3 class="contact__title">Напишите мне свой проект</h3>
 
 					<form id="form" class="contact__form">
 						<div class="contact__form-div">
-							<label for="" class="contact__form-tag">Имя</label>
-							<input type="text" id="from_name" name="from_name" placeholder="Ваше полное имя" class="contact__form-input"
-								required>
+							<label class="contact__form-tag">Имя</label>
+							<input type="text" id="fullName" placeholder="Ваше полное имя" required class="contact__form-input">
 						</div>
 
 						<div class="contact__form-div">
-							<label for="" class="contact__form-tag">Почта</label>
-							<input type="email" id="email_id" name="email_id" placeholder="Ваша почта" class="contact__form-input"
-								required>
+							<label class="contact__form-tag">Почта</label>
+							<input type="email" id="email_id" placeholder="Ваша почта" required class="contact__form-input">
 						</div>
 
 						<div class="contact__form-div contact__form-area">
-							<label for="" class="contact__form-tag">Проект</label>
-							<textarea name="message" id="message" cols="30" rows="10" placeholder="Напишите свой проект"
-								class="contact__form-input" required></textarea>
+							<label class="contact__form-tag">Проект</label>
+							<textarea id="message" placeholder="Напишите свой проект" required class="contact__form-input"></textarea>
 						</div>
 
-						<button type="submit" id="button" value="Send Email"  class="button">Отправить сообщение</button>
+						<button onclick="SendMail()" class="button">Отправить сообщение</button>
 					</form>
 				</div>
 			</div>
@@ -640,6 +649,9 @@
 				</li>
 				<li>
 					<a href="#work" class="footer__link">Портфолио</a>
+				</li>
+				<a href="#services" class="footer__link">Услуги</a>
+				</li>
 				</li>
 				<a href="#testimonial" class="footer__link">Отзывы</a>
 				</li>
@@ -665,14 +677,8 @@
 		</div>
 	</footer>
 
-	<!-- <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('uR31Z4KSLSBiX3-uN')
-</script> -->
-
-
+	<!--=============== SWEETALERT===============-->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 	<!--=============== SCROLLREVEAL ===============-->
 	<script src="assets/js/scrollreveal.min.js"></script>

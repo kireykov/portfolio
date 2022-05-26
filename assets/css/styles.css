@@ -230,7 +230,7 @@ nav {
 
 .nav__link {
 	color: var(--text-color);
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	padding: .4rem;
 	display: flex;
 	border-radius: 5rem;
@@ -716,6 +716,9 @@ nav {
 }
 
 /*=============== TESTIMONIAL ===============*/
+
+
+
 .testimonial__card {
 	background-color: var(--container-color);
 	padding: 1.25rem 1.5rem;
@@ -991,6 +994,10 @@ nav {
 		right: 0;
 		margin: 0 auto;
 	}
+
+	.nav__link {	
+		font-size: 1.5rem;	
+	}
 	.about__info {
 		grid-template-columns: repeat(3, 140px);
 		justify-content: center;
@@ -1066,6 +1073,15 @@ nav {
 
 	.nav {
 		height: calc(var(--header-height) + 0.6rem);
+	}
+
+	.nav__link {	
+		font-size: 1.5rem;
+	
+	}
+
+	.home__container {
+		padding-top: 0.1rem;
 	}
 
 	.home__handle {
